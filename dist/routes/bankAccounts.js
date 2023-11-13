@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const constants_1 = require("../config/constants");
+const auth_1 = require("../middlewares/auth");
+const auth_2 = require("../middlewares/auth");
+var asyncHandle = require('express-async-handler');
+const bankAccsRouter = (0, express_1.Router)();
+bankAccsRouter.get('bank-accounts/:bankAccId', asyncHandle(auth_1.isAuthenticated), asyncHandle((0, auth_2.mkPlaysRole)(constants_1.CUSTOMER)));
+exports.default = bankAccsRouter;

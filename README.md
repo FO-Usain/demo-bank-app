@@ -22,7 +22,7 @@ A demo bank-app that does not involve real money, but involves the customers mak
 - mongodb (version 6.0.2)
 <br />
 
-> **Note: sure you create a .env file and define the following variables in it**
+> **Note: make sure you create a .env file and define the following variables in it:**
 > - JWT_KEY=kjscxqioecnqckjcsaam
 > - DB_SERVER=localhost:27017
 > - DB=BankAppDB=BankApp
@@ -35,7 +35,12 @@ A demo bank-app that does not involve real money, but involves the customers mak
 
 
 # Only the Client has a Frontend-view
-To view the client's front-end, open [http://localhost:3000](http://localhost:3000) in the browser, after running the app
+To view the client's front-end, open [http://localhost:3000](http://localhost:3000) in the browser, after running the app.
+<br />
+
+# Access the Admin's perspective with Postman
+- seed the admin's info into the db with: *node ./dist/db/seeders/seedAdmins.js*
+- login to the admin with the following URI: '/api/login' 
 
 # Contacting Me For guidance
 For guidance on using the app optimally, as specified in the file in the **doc directory**, you can chat me up on whatsapp: [+2349134813537]
